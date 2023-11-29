@@ -1,0 +1,60 @@
+[
+    {
+        "img": "game-photos/firstgame.jpg",
+        "gameType": "Home Game",
+       "title": "DOUBLE HEADER",
+        "date": "Sat 7 Oct",
+        "location": "Copenhagen - DGI Byen",
+        "teams":"Team A vs Team B",
+        "button1": {
+          "text": "Stream",
+          "link": "https://example.com/tickets"
+        },
+        "button2": {
+          "text": "MORE INFO",
+          "link": "https://example.com/more-info"
+        }
+      },
+    {
+      "img": "game-photos/secondgame.jpg",
+      "gameType": "Away Game",
+      "title": "SKATE OF THE DEATH",
+      "date": "Sat 21 - Sun 22 Oct",
+      "location": "Brussels",
+      "teams":"Team A vs Team B",
+      "button1": {
+        "text": "Stream",
+        "link": "https://example.com/tickets"
+      },
+      "button2": {
+        "text": "MORE INFO",
+        "link": "https://example.com/more-info"
+      }
+
+
+
+
+    },
+  
+    {
+      "img": "game-photos/thirdgame.jpg",
+      "gameType": "Home Game",
+      "title": "DOUBLE HEADER",
+      "date": "Sat 21 Oct",
+      "location": "Copenhagen - DGI Byen",
+      "teams":"Team A vs Team B",
+
+      "button1": {
+        "text": "Stream",
+        "link": "https://example.com/tickets"
+      },
+      "button2": {
+        "text": "MORE INFO",
+        "link": "https://example.com/more-info"
+      }
+
+    
+    }
+  
+    
+  ]

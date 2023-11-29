@@ -180,6 +180,58 @@ nav a:hover::after {
   position: absolute;
   left: -2.5rem;
 }
+/* ------------------ upcoming events ----------------------*/
+
+.upcoming-events {
+  display: grid;
+  grid-template-columns: 1fr 8fr 1fr;
+}
+
+.upcoming-events > div:nth-of-type(1) {
+  grid-area: 1/2/2/3;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  position: relative;
+  /* align-items: center; */
+}
+
+/* Style the h2 and img in the title container */
+.upcoming-events > div:nth-of-type(1) h2 {
+  color: #333;
+}
+
+.upcoming-events > div:nth-of-type(1) img {
+  max-width: 30%;
+  height: auto;
+  position: absolute;
+  right: 0;
+  top: -500%;
+  z-index: -1;
+}
+
+.games-container {
+  grid-area: 2/2/3/3;
+  padding-block-end: 15rem;
+  color: var(--light-yellow);
+}
+.games {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.games div {
+  background-color: var(--black);
+  max-width: 300px;
+  height: 25rem;
+}
+.games img {
+  max-width: 100%;
+  height: auto;
+}
 
 /* ------------------ footer ----------------------*/
 footer {

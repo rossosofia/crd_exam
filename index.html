@@ -4,6 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+
+    <script src="script-home.js"></script>
+
     <title>Copenhagen Roller Derby</title>
   </head>
   <body>
@@ -59,10 +62,25 @@
         <a href="join-us.html">Read more</a>
       </div>
     </article>
-    <section>
+
+    <section class="upcoming-events">
       <div>
         <h2>UPCOMING EVENTS</h2>
         <img src="assets/upcomin-events.png" alt="" />
+      </div>
+      <div class="games-container">
+        <div class="games">
+          <template id="games-template">
+            <div>
+              <img src="" alt="alt" />
+              <p class="gameType">Game</p>
+              <h2>Title</h2>
+              <p class="date">date</p>
+              <p class="location">location</p>
+              <p class="teams">teams</p>
+            </div>
+          </template>
+        </div>
       </div>
     </section>
 
