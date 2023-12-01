@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="stylemeet.css" />
+    <script type="module" src="js.js"></script>
+
+    <title>League</title>
+  </head>
+  <body>
+    <main>
+      <nav>
+        <div class="logo">COPENHAGEN ROLLER DERBY</div>
+        <ul>
+          <li><a href="meet.html">Meet the club</a></li>
+          <li><a href="joinus.html">Join us </a></li>
+          <li><a href="contacts.html">Contacts</a></li>
+          <li><a href="a-bout.html">A-bout game</a></li>
+        </ul>
+      </nav>
+      <section>
+        <h3>Houses</h3>
+        <button class="filter" data-action="filter" data-filter="team-a">Team A</button>
+        <button class="filter" data-action="filter" data-filter="team-b">Team B</button>
+        <button class="filter" data-action="filter" data-filter="junior">Junior</button>
+        <button class="filter" data-action="filter" data-filter="official">Official</button>
+      </section>
+      <div id="list-container">
+        <div id="list">
+          <!-- animal template will be copied and inserted here -->
+        </div>
+      </div>
+    </main>
+
+    <template>
+      <article class="members">
+        <img id="image" src="" alt="propic" />
+        <h1 data-field="name">Name</h1>
+        <p data-field="number">Number</p>
+      </article>
+    </template>
+  </body>
+</html>
