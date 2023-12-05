@@ -1,0 +1,259 @@
+@font-face {
+  font-family: "Akzidenz-Grotesk-Regular";
+  src: url("./fonts/AKZIDENZ-GROTESK-PRO-LIGHT-REGULAR.OTF");
+  font-weight: light;
+}
+
+@font-face {
+  font-family: "Akzidenz-Grotesk-Regular";
+  src: url("./fonts/AKZIDENZ-GROTESK-PRO-REGULAR-REGULAR.OTF");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Akzidenz-Grotesk-Regular";
+  src: url("/fonts/AKZIDENZ-GROTESK-PRO-MED-REGULAR.OTF");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Akzidenz-Grotesk-Extended";
+  src: url("./fonts/AKZIDENZ-GROTESK-PRO-LIGHT-EXT-REGULAR.OTF");
+  font-weight: light;
+}
+
+@font-face {
+  font-family: "Akzidenz-Grotesk-Extended";
+  src: url("./fonts/AKZIDENZ-GROTESK-PRO-MED-EXT-REGULAR.OTF");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Akzidenz-Grotesk-Extended";
+  src: url("./fonts/AKZIDENZ-GROTESK-PRO-BOLD-EXT-REGULAR.OTF");
+  font-weight: bold;
+}
+
+:root {
+  --black: #1e1e1e;
+  --gray: #9a9a9a;
+  --mustard: #e5b635;
+  --light-yellow: #fbf0d0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--light-yellow);
+  font-family: "Akzidenz-Grotesk-Regular";
+}
+h2 {
+  font-family: "Akzidenz-Grotesk-Extended";
+  font-weight: bold;
+  size: 40px;
+}
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--light-yellow);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+nav .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 3rem;
+}
+
+/* nav li {
+    margin-right: 2rem;
+  } */
+
+nav a {
+  text-decoration: none;
+  color: var(--black);
+  position: relative;
+  transition: color 0.3s;
+}
+/* nav a:hover {
+    color: yellow;
+  } */
+
+nav a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0.125rem;
+  background: var(--mustard);
+  bottom: -0.25rem;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s;
+}
+
+nav a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+/* ------------------ header ----------------------*/
+
+header {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 1.5rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+header div {
+  grid-area: 1/2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+
+/* ------------------ game ----------------------*/
+
+.game {
+  display: grid;
+  grid-template-columns: 1fr 4fr 4fr 1fr;
+  gap: 1.5rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.game div {
+  grid-area: 1/2;
+}
+/* ------------------ basics ----------------------*/
+
+.basics {
+  display: grid;
+  grid-template-columns: 1fr 4fr 4fr 1fr;
+  gap: 1.5rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  justify-content: center; /* Center content horizontally */
+  align-items: center;
+}
+
+.basics div {
+  grid-area: 1/2;
+}
+.basics article {
+  grid-area: 1/3;
+  justify-content: center;
+  align-items: center;
+}
+.helmets {
+  display: flex;
+  flex-direction: row;
+}
+.helmets img {
+  width: 30%;
+  height: auto;
+}
+/* ------------------ questions ----------------------*/
+
+.questions {
+  display: grid;
+  grid-template-columns: 1fr 8fr 1fr;
+  gap: 1.5rem;
+  padding-bottom: 3rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.questions div {
+  grid-area: 1/2;
+}
+
+.questions article:first-child {
+  text-align: center;
+}
+.questions article:nth-child(2) {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+}
+
+.questions article:nth-child(2) > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+/* ------------------ fun-facts ----------------------*/
+
+.fun-facts {
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr;
+  gap: 1.5rem;
+  padding-bottom: 3rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.fun-facts div {
+  grid-area: 1/2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* ------------------ footer ----------------------*/
+footer {
+  display: grid;
+  grid-template-columns: 1fr 4fr 4fr 1fr;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: var(--black);
+  color: var(--light-yellow);
+  justify-content: center;
+  align-items: center;
+}
+footer h3 {
+  color: var(--mustard);
+}
+footer a {
+  text-decoration: none;
+  color: var(--light-yellow);
+}
+footer > div:nth-child(1) {
+  grid-area: 1/2;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 1rem;
+}
+
+footer > div:nth-child(2) {
+  grid-area: 1/3;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 1rem;
+}
