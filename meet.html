@@ -20,26 +20,57 @@
           <li><a href="a-bout.html">A-bout game</a></li>
         </ul>
       </nav>
-      <section>
-        <h3>Houses</h3>
-        <button class="filter" data-action="filter" data-filter="team-a">Team A</button>
-        <button class="filter" data-action="filter" data-filter="team-b">Team B</button>
-        <button class="filter" data-action="filter" data-filter="junior">Junior</button>
-        <button class="filter" data-action="filter" data-filter="official">Official</button>
+      <article>
+        <div>
+          <h1>Meet the club</h1>
+          <p>
+            In our club, we provide opportunities for growth and improvement through our competitive traveling teams. Hosting All Stars ,Brawl Stars, and a Junior Team, each contributes significantly to our inclusive and diverse community. Our
+            Officials uphold fair play, preserving the core spirit of the sport.
+          </p>
+        </div>
+      </article>
+      <section class="filter-container">
+        <div>
+          <button class="filter" data-action="filter" data-filter="team-a">Team A</button>
+          <button class="filter" data-action="filter" data-filter="team-b">Team B</button>
+          <button class="filter" data-action="filter" data-filter="junior">Junior</button>
+          <button class="filter" data-action="filter" data-filter="official">Official</button>
+        </div>
       </section>
       <div id="list-container">
         <div id="list">
-          <!-- animal template will be copied and inserted here -->
+          <!-- skaters template will be copied and inserted here -->
         </div>
       </div>
+      <footer>
+        <div>
+          <h3>COPENHAGEN ROLLER DERBY</h3>
+          <p>Photo Credits</p>
+          <p>A big shoutout to the amazing volunteer photographers whose images are used in our website.Check them out!</p>
+          <div class="photographers">
+            <a href="instagram.com">Name 1</a>
+            <a href="instagram.com">Name 2</a>
+            <a href="instagram.com">Name 3</a>
+          </div>
+        </div>
+
+        <div>
+          <p>Email us</p>
+          <a href="mailto:pr@copenhagenrollerderby.com">pr@copenhagenrollerderby.com</a>
+          <div>
+            <a href="https://www.facebook.com/copenhagenrollerderby/">f</a>
+            <a href="https://www.instagram.com/cphrollerderby/">ig</a>
+          </div>
+        </div>
+      </footer>
     </main>
 
     <template>
-      <article class="members">
+      <section class="members">
         <img id="image" src="" alt="propic" />
         <h1 data-field="name">Name</h1>
         <p data-field="number">Number</p>
-      </article>
+      </section>
     </template>
   </body>
 </html>

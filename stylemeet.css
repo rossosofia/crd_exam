@@ -112,7 +112,134 @@ nav a:hover::after {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
+/* ------------------  ----------------------*/
 
-img {
-  max-height: 20rem;
+article {
+  display: grid;
+  grid-template-columns: 2fr 3fr 2fr;
+  padding-block-end: 3rem;
+}
+article div {
+  grid-area: 1/2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+article {
+  text-align: center;
+}
+/* ------------------  ----------------------*/
+
+.filter-container {
+  display: grid;
+  grid-template-columns: 2fr 3fr 2fr;
+  padding-block-end: 5rem;
+}
+.filter-container div {
+  grid-area: 1/2;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.filter {
+  position: relative;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: color 0.3s ease; /* Add a smooth transition for the text color */
+}
+
+/* Change text color on hover */
+.filter:hover {
+  color: #007bff; /* Change the text color on hover */
+}
+
+/* Change text color on active (button press) */
+.active {
+  color: #ff6600; /* Change the text color on active state (button press) */
+}
+
+.active::after {
+  content: url("assets/line.png");
+  position: absolute;
+  top: 0;
+  left: -100%;
+}
+
+/* ------------------  ----------------------*/
+
+#list-container {
+  display: grid;
+  grid-template-columns: 1fr 8fr 1fr;
+  padding-block-end: 3rem;
+}
+#list {
+  grid-area: 1/2;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+  justify-content: center; /* Center the content horizontally */
+}
+
+#list img {
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+}
+/* ------------------  ----------------------*/
+
+footer {
+  display: grid;
+  grid-template-columns: 1fr 4fr 4fr 1fr;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: var(--black);
+  color: var(--light-yellow);
+  justify-content: center;
+  align-items: center;
+}
+footer h3 {
+  color: var(--mustard);
+}
+footer a {
+  text-decoration: none;
+  color: var(--light-yellow);
+}
+footer > div:nth-child(1) {
+  grid-area: 1/2;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 1rem;
+}
+
+footer > div:nth-child(2) {
+  grid-area: 1/3;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* Media query for screens with a maximum width of 768px (typical for tablets and mobile devices) */
+@media only screen and (max-width: 768px) {
+  article,
+  .filter-container,
+  #list-container {
+    grid-template-columns: 1fr; /* Change to a single column layout on smaller screens */
+  }
+
+  .filter-container div,
+  #list {
+    grid-area: unset; /* Remove grid area to stack items vertically */
+  }
+
+  #list img {
+    width: 100%; /* Ensure images take up the full width of the container */
+    height: auto; /* Maintain the aspect ratio of images */
+  }
 }
