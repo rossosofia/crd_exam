@@ -1,7 +1,6 @@
 
 window.addEventListener("load", setup);
-// const endpoint = "https://www.kamarini.dk/wp22e/wp-json/wp/v2/product";
-// const endpoint = data.json;
+
 console.log ("kama is here ");
 
 function setup() {
@@ -36,3 +35,4 @@ function setupGames(catArray) {
     });
   }
   
+
