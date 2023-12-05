@@ -148,17 +148,15 @@ article {
   border: none;
   cursor: pointer;
   text-decoration: none;
-  transition: color 0.3s ease; /* Add a smooth transition for the text color */
+  transition: color 0.3s ease;
 }
 
-/* Change text color on hover */
 .filter:hover {
-  color: #007bff; /* Change the text color on hover */
+  color: #007bff;
 }
 
-/* Change text color on active (button press) */
 .active {
-  color: #ff6600; /* Change the text color on active state (button press) */
+  color: #ff6600;
 }
 
 .active::after {
@@ -180,7 +178,7 @@ article {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 1rem;
-  justify-content: center; /* Center the content horizontally */
+  justify-content: center;
 }
 
 #list img {
@@ -223,23 +221,4 @@ footer > div:nth-child(2) {
   align-items: start;
   justify-content: center;
   gap: 1rem;
-}
-
-/* Media query for screens with a maximum width of 768px (typical for tablets and mobile devices) */
-@media only screen and (max-width: 768px) {
-  article,
-  .filter-container,
-  #list-container {
-    grid-template-columns: 1fr; /* Change to a single column layout on smaller screens */
-  }
-
-  .filter-container div,
-  #list {
-    grid-area: unset; /* Remove grid area to stack items vertically */
-  }
-
-  #list img {
-    width: 100%; /* Ensure images take up the full width of the container */
-    height: auto; /* Maintain the aspect ratio of images */
-  }
 }
