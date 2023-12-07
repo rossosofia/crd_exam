@@ -57,7 +57,6 @@ body {
 h2 {
   font-family: "Akzidenz-Grotesk-Extended";
   font-weight: bold;
-  size: 40px;
 }
 nav {
   position: sticky;
@@ -158,40 +157,27 @@ nav a:hover::after {
 
 /* ------------------ guidelines ----------------------*/
 .guidelines {
+  background-image: url(assets/guidelines.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
   display: grid;
-  grid-template-columns: 1fr 4fr 4fr 1fr;
+  grid-template-columns: 1fr 4fr 1fr;
   gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   padding-top: 3rem;
-  position: relative;
   min-height: 100vh; /* maybe i can play with that */
 }
 
 .guidelines > div:nth-of-type(1) {
-  grid-column: 2 / span 2;
+  grid-area: 1/2;
   display: flex;
   gap: 1rem;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: relative;
   text-align: center;
-  z-index: 1;
-  line-height: 1.2;
-  padding: 0 10rem;
-}
-
-.guidelines::before {
-  content: "";
-  background-image: url("assets/guidelines.svg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: -1;
 }
 
 /* ------------------ join us ----------------------*/
@@ -206,6 +192,8 @@ nav a:hover::after {
 .join-us div {
   grid-area: 1/3;
   justify-content: center;
+
+  text-align: left;
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -230,6 +218,11 @@ nav a:hover::after {
   left: -2.5rem;
 }
 /* ------------------ upcoming events ----------------------*/
+
+.upcoming-events {
+  display: grid;
+  grid-template-columns: 1fr 3fr 3fr 3fr 1fr;
+}
 
 .upcoming-events {
   display: grid;
@@ -279,7 +272,7 @@ nav a:hover::after {
 }
 
 .games img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
 }
 
@@ -333,12 +326,88 @@ footer > div:nth-child(2) {
     flex-direction: row;
     gap: 1rem;
   }
+  /* ------------------ info ----------------------*/
+
+  .info {
+    display: grid;
+    grid-template-columns: 1fr 6fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 0.5rem;
+    padding-top: 1rem;
+  }
+
+  .info > div:nth-child(1),
+  .info > div:nth-of-type(2) {
+    gap: 0.5rem;
+  }
+  .info > div:nth-child(1) {
+    grid-area: 2/2;
+  }
+  .info > img:nth-of-type(1) {
+    grid-area: 1/2;
+    max-width: 80%;
+  }
+  .info > img:nth-of-type(2) {
+    grid-area: 3/2;
+    max-width: 80%;
+  }
+
+  .info > div:nth-of-type(2) {
+    grid-area: 4/2;
+  }
+  /* ------------------ guidelines ----------------------*/
+
+  .guidelines {
+    grid-template-columns: 1fr; /* Single column layout for smaller screens */
+    padding: 2rem; /* Adjusted padding for better spacing on smaller screens */
+  }
+
+  .guidelines > div:nth-of-type(1) {
+    order: 2; /* Change the order for better flow on smaller screens */
+  }
+  /* ------------------ join us ----------------------*/
+  .join-us {
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    gap: 1rem;
+  }
+
+  .join-us div {
+    grid-area: 2/2;
+  }
+
+  .join-us img {
+    grid-area: 1/2;
+    max-width: 100%;
+  }
+  /* ------------------ upcoming events ----------------------*/
+
+  .upcoming-events > div:nth-of-type(1) {
+    grid-template-columns: 1fr;
+  }
+
+  .upcoming-events > div:nth-of-type(1) h2 {
+    grid-column: 1 / span 1;
+    font-size: 2rem;
+  }
+
+  .upcoming-events > div:nth-of-type(1) img {
+    max-width: 80%;
+    height: auto;
+    grid-column: 1 / span 1;
+    margin-left: auto;
+  }
+
+  .games {
+    grid-template-columns: 1fr; /* Adjusted for smaller screens */
+  }
+
+  /* ------------------ footer ----------------------*/
 
   footer {
     grid-template-columns: 1fr;
     text-align: center;
   }
-
   footer > div:nth-child(1),
   footer > div:nth-child(2) {
     grid-area: auto;
