@@ -33,3 +33,29 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
   
+
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const cardsContainer = document.querySelector(".cards-container");
+    const cards = document.querySelectorAll(".card");
+    let currentIndex = 0;
+  
+    // Set initial visibility
+    cards.forEach((card, index) => {
+      if (index === currentIndex) {
+        card.style.opacity = 1;
+      } else {
+        card.style.opacity = 0;
+      }
+    });
+  
+    cards.forEach((card, index) => {
+      card.addEventListener("click", function () {
+        cards[currentIndex].style.opacity = 0;
+        currentIndex = (currentIndex + 1) % cards.length;
+        cards[currentIndex].style.opacity = 1;
+      });
+    });
+  });
+  
+  
