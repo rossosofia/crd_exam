@@ -272,16 +272,12 @@ header div {
   gap: 2rem;
 }
 /* ------------------ fun-facts ----------------------*/
-
 .fun-facts {
   display: grid;
   grid-template-columns: 1fr 8fr 1fr;
   gap: 1.5rem;
-  padding-bottom: 3rem;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  position: relative;
+  padding-top: 3rem;
+  padding-bottom: 20rem;
 }
 
 .fun-facts > div {
@@ -291,40 +287,64 @@ header div {
 }
 
 .fun-facts > div > article:nth-child(1) {
-  grid-column: 1;
+  grid-area: 1/1;
+  position: relative;
 }
 
 .fun-facts > div > article:nth-child(2) {
-  grid-column: 2;
+  grid-area: 1/2;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 2rem;
 }
 
-.fun-facts > div > article:nth-child(1) .cards-container {
-  position: relative;
-  height: 100%;
+.card {
+  position: absolute;
+  transition: transform 0.5s ease-in-out, opacity 0.5s, z-index 0.5s;
+  cursor: pointer;
 }
 
-.fun-facts > div > article:nth-child(1) .card {
-  background-color: var(--mustard);
-  box-sizing: border-box;
-  border: 1px solid #ccc;
-  padding: 20px;
-  margin-bottom: 10px; /* Adjust spacing between cards if needed */
-  transition: opacity 0.5s ease, transform 0.5s ease; /* Added transition for transform */
-  width: 100%;
-  position: absolute; /* Position cards absolutely within the container */
+#card1 {
+  top: 0%;
+  left: 0%;
+  background-color: #1e1e1e;
 }
 
-.fun-facts > div > article:nth-child(1) .card.active {
-  opacity: 0;
-  transform: translateX(-100%); /* Swipe the card to the left */
+#card2 {
+  top: -10%;
+  left: 5%;
+  background-color: blue;
 }
 
-.fun-facts > div > article:nth-child(1) .card:not(:last-child) {
-  margin-bottom: 10px;
+#card3 {
+  top: 20%;
+  left: -5%;
+  background-color: green;
+}
+.class1 {
+  z-index: 1;
+}
+.class2 {
+  z-index: 2;
+}
+.class3 {
+  z-index: 3;
+}
+.card-clicked {
+  animation: cardClickAnimation 0.5s ease-in-out;
+}
+
+@keyframes cardClickAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-50px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 /* ------------------ footer ----------------------*/
 footer {

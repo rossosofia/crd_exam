@@ -34,28 +34,29 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   
 
+  function swapClasses(clickedCard) {
+    // Get references to all three cards
+    const card1 = document.getElementById('card1');
+    const card2 = document.getElementById('card2');
+    const card3 = document.getElementById('card3');
 
-  document.addEventListener("DOMContentLoaded", function () {
-    const cardsContainer = document.querySelector(".cards-container");
-    const cards = document.querySelectorAll(".card");
-    let currentIndex = 0;
-  
-    // Set initial visibility
-    cards.forEach((card, index) => {
-      if (index === currentIndex) {
-        card.style.opacity = 1;
-      } else {
-        card.style.opacity = 0;
-      }
-    });
-  
-    cards.forEach((card, index) => {
-      card.addEventListener("click", function () {
-        cards[currentIndex].style.opacity = 0;
-        currentIndex = (currentIndex + 1) % cards.length;
-        cards[currentIndex].style.opacity = 1;
-      });
-    });
-  });
-  
-  
+    // Remove the clicked class from all cards
+    card1.classList.remove('card-clicked');
+    card2.classList.remove('card-clicked');
+    card3.classList.remove('card-clicked');
+
+    // Add the clicked class to the clicked card
+    clickedCard.classList.add('card-clicked');
+
+    // Get the current classes of each card
+    const class1 = card1.className;
+    const class2 = card2.className;
+    const class3 = card3.className;
+
+    // Swap the classes after a short delay to allow the animation to play
+    setTimeout(() => {
+      card1.className = class3;
+      card2.className = class1;
+      card3.className = class2;
+    }, 500); // 500 milliseconds is the duration of the animation
+  }
