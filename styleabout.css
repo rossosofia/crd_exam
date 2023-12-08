@@ -40,14 +40,13 @@
   --mustard: #e5b635;
   --light-yellow: #fbf0d0;
 }
-
-html {
-  scroll-behavior: smooth;
-}
-
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -141,6 +140,7 @@ header div {
   gap: 1.5rem;
   padding-top: 3rem;
   padding-bottom: 3rem;
+  position: relative;
   height: 70vh;
 }
 
@@ -165,11 +165,11 @@ header div {
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 30px;
-  background: var(--mustard); /* Set your desired background color */
-  color: var(--black); /* Set your desired text color */
+  background: var(--mustard);
+  color: var(--black);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-  z-index: 2; /* Ensure the popup is above the overlay */
-  max-width: 80vw; /* Set your desired maximum width */
+  z-index: 2;
+  max-width: 80vw;
 }
 
 .popup h3 {
@@ -190,22 +190,21 @@ header div {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Set your desired overlay color and opacity */
+  background: rgba(0, 0, 0, 0.5);
   z-index: 1;
   display: none;
-  transition: opacity 0.3s ease; /* Add a transition effect */
+  transition: opacity 0.3s ease;
 }
 
 .overlay.active {
   display: block;
-  opacity: 1; /* Fully opaque when active */
+  opacity: 1;
 }
 
-/* Reduce opacity for the rest of the page when the overlay is active */
 .overlay.active + main {
   opacity: 10%;
-  color: black; /* Set your desired opacity level */
-  pointer-events: none; /* Disable interactions with the underlying content */
+  color: black;
+  pointer-events: none;
 }
 
 .popup.active {
@@ -277,18 +276,15 @@ header div {
   grid-template-columns: 1fr 8fr 1fr;
   gap: 1.5rem;
   padding-top: 3rem;
-  padding-bottom: 20rem;
+  padding-bottom: 3rem;
 }
 
 .fun-facts > div {
   grid-area: 1/2;
   display: grid;
   grid-template-columns: 1fr 1fr;
-}
-
-.fun-facts > div > article:nth-child(1) {
-  grid-area: 1/1;
-  position: relative;
+  justify-content: center;
+  align-items: center;
 }
 
 .fun-facts > div > article:nth-child(2) {
@@ -298,39 +294,69 @@ header div {
   align-items: center;
   gap: 2rem;
 }
+.cards-container {
+  grid-area: 1/1;
+  position: relative;
+  height: 25rem;
+  width: 25rem;
+  justify-items: center;
+  align-items: center;
+}
 
 .card {
   position: absolute;
   transition: transform 0.5s ease-in-out, opacity 0.5s, z-index 0.5s;
   cursor: pointer;
+  height: 80%;
+  width: 80%;
+  transform-origin: center center; /* Set the rotation origin to the center */
 }
 
-#card1 {
-  top: 0%;
-  left: 0%;
-  background-color: #1e1e1e;
+.card:nth-child(1) {
+  transform: translateX(15%) translateY(18%) rotate(-3deg); /* Adjust rotation and position for the first card */
 }
 
-#card2 {
-  top: -10%;
-  left: 5%;
-  background-color: blue;
+.card:nth-child(2) {
+  transform: translateX(15%) translateY(15%); /* Adjust position for the second card */
 }
 
-#card3 {
-  top: 20%;
-  left: -5%;
-  background-color: green;
+.card:nth-child(3) {
+  transform: translateX(20%) translateY(22%) rotate(3deg); /* Adjust rotation and position for the third card */
 }
+
+.mustard-square {
+  background-color: var(--mustard);
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.mustard-square h3 {
+  margin-bottom: 10px;
+}
+
+.mustard-square p {
+  text-align: center;
+}
+
 .class1 {
   z-index: 1;
 }
+
 .class2 {
   z-index: 2;
 }
+
 .class3 {
   z-index: 3;
 }
+
 .card-clicked {
   animation: cardClickAnimation 0.5s ease-in-out;
 }
@@ -346,6 +372,7 @@ header div {
     transform: translateY(0);
   }
 }
+
 /* ------------------ footer ----------------------*/
 footer {
   display: grid;
@@ -383,6 +410,8 @@ footer > div:nth-child(2) {
 }
 
 @media screen and (max-width: 768px) {
+  /* ------------------ nav ----------------------*/
+
   nav {
     flex-direction: column;
     text-align: center;
@@ -396,6 +425,26 @@ footer > div:nth-child(2) {
     flex-direction: row;
     gap: 1rem;
   }
+  /* ------------------ fun facts ----------------------*/
+
+  .fun-facts {
+    grid-template-columns: 1fr 6fr 1fr;
+  }
+  .fun-facts > div {
+    grid-area: 1/2;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .fun-facts > div > article:nth-child(2) {
+    grid-area: 1/2;
+  }
+  .cards-container {
+    grid-area: 2/2;
+    position: relative;
+    height: 25rem;
+    width: 25rem;
+  }
+  /* ------------------ footer ----------------------*/
 
   footer {
     grid-template-columns: 1fr;
