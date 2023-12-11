@@ -294,19 +294,18 @@ header div {
 .questions article:first-child {
   text-align: center;
 }
-.questions article:nth-child(2) {
+.question-container {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 2rem;
+  justify-content: center;
+  gap: 3rem;
 }
 
-.questions article:nth-child(2) > div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2rem;
+.questions img {
+  width: 20%;
 }
+
 /* ------------------ fun-facts ----------------------*/
 .fun-facts {
   display: grid;
@@ -350,15 +349,15 @@ header div {
 }
 
 .card:nth-child(1) {
-  transform: translateX(15%) translateY(18%) rotate(-3deg); /* Adjust rotation and position for the first card */
+  transform: translateX(-10%) translateY(15%) rotate(-5deg);
 }
 
 .card:nth-child(2) {
-  transform: translateX(15%) translateY(15%); /* Adjust position for the second card */
+  transform: translateX(0) translateY(0);
 }
 
 .card:nth-child(3) {
-  transform: translateX(20%) translateY(22%) rotate(3deg); /* Adjust rotation and position for the third card */
+  transform: translateX(10%) translateY(15%) rotate(5deg);
 }
 
 .mustard-square {
@@ -400,13 +399,19 @@ header div {
 
 @keyframes cardClickAnimation {
   0% {
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
+  }
+  25% {
+    transform: translateY(-10%) scale(1.1);
   }
   50% {
-    transform: translateY(-50px);
+    transform: translateY(-20%) scale(1.2);
+  }
+  75% {
+    transform: translateY(-10%) scale(1.1);
   }
   100% {
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
   }
 }
 

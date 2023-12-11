@@ -47,10 +47,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-  // Set initial values
-  document.getElementById('helmet-heading').innerText = 'JAMMER';
-  document.getElementById('helmet-paragraph').innerText = 'The point scorer of the team. They aim to pass through opposing blockers scoring points for each opponent they legally pass. Jammers must be agile and swift to get through the pack.';
-
   function changeText(helmetType, description, activeImgSrc, clickedImg) {
     // Update text and description
     document.getElementById('helmet-heading').innerText = helmetType;
@@ -66,6 +62,60 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
 
+
+
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const questions = [
+      {
+        imgSrc: "assets-about/nso.png",
+        question: "Question 1",
+        answer: "Answer to question 1...",
+      },
+      {
+        imgSrc: "assets-about/ref.png",
+        question: "Question 2",
+        answer: "Answer to question 2...",
+      },
+      {
+        imgSrc: "assets-about/skaters.png",
+        question: "Question 3",
+        answer: "Answer to question 3...",
+      },
+    ];
+  
+    let currentQuestionIndex = 0;
+    const questionContainer = document.querySelector(".question-container");
+    const imgElement = questionContainer.querySelector("img");
+    const h3Element = questionContainer.querySelector("h3");
+    const pElement = questionContainer.querySelector("p");
+    const leftArrow = document.querySelector(".left-arrow");
+    const rightArrow = document.querySelector(".right-arrow");
+  
+    function showQuestion(index) {
+      const currentQuestion = questions[index];
+      imgElement.src = currentQuestion.imgSrc;
+      h3Element.textContent = currentQuestion.question;
+      pElement.textContent = currentQuestion.answer;
+    }
+  
+    function navigateLeft() {
+      currentQuestionIndex = (currentQuestionIndex - 1 + questions.length) % questions.length;
+      showQuestion(currentQuestionIndex);
+    }
+  
+    function navigateRight() {
+      currentQuestionIndex = (currentQuestionIndex + 1) % questions.length;
+      showQuestion(currentQuestionIndex);
+    }
+  
+    leftArrow.addEventListener("click", navigateLeft);
+    rightArrow.addEventListener("click", navigateRight);
+  
+    // Show initial question
+    showQuestion(currentQuestionIndex);
+  });
+  
 
   function swapClasses(clickedCard) {
     // Get references to all three cards
