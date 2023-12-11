@@ -33,9 +33,12 @@
       </div>
       <div class="image-container">
         <img class="track" src="assets-about/track.png" alt="" style="rotate: calc(-10deg); width: 70%" />
-        <img src="assets-about/nso.png" alt="" class="nso" style="width: 13%; top: 30%; left: 30%" />
+        <img src="assets-about/nso.png" alt="" class="nso" style="width: 13%; top: 30%; left: 33%" />
         <img src="assets-about/skaters.png" alt="" class="skaters" style="width: 25%; top: -10%; left: 50%" />
-        <img src="assets-about/ref.png" alt="" class="ref" style="width: 15%; top: 0%; left: 10%" />
+        <img src="assets-about/ref.png" alt="" class="ref" style="width: 15%; top: 3%; left: 7%" />
+        <img src="assets-about/commentators-2.png" alt="" class="commentators-2" style="width: 20%; top: 75%; left: 0%" />
+        <img src="assets-about/penalty.png" alt="" class="penalty" style="width: 17%; top: 7%; left: 80%" />
+        <img src="assets-about/merch-bw.png" alt="" class="merch-bw" style="width: 18%; top: 70%; left: 60%" />
 
         <!-- Popup container -->
         <div class="popup">
@@ -45,22 +48,39 @@
         </div>
       </div>
     </section>
-
     <section class="basics">
-      <div>
+      <div class="basics-title">
         <h2>THE BASICS OF ROLLER DERBY</h2>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio sapiente, pariatur consequuntur deserunt eum dolor suscipit laborum rem. Optio labore sit consequatur pariatur illo eligendi alias repellat modi aliquid corporis?</p>
-        <img src="assets/events-cut.png" alt="" />
+        <p>
+          Roller derby involves two teams skating around a track. Each team has one jammer aiming to pass opponents to score points, while blockers work to stop the opposing jammer. A match consists of two 30-minute periods, split into shorter
+          segments called jams, each lasting a maximum of 2 minutes.
+        </p>
+        <img src="assets-about/track-skaters.png" alt="" style="rotate: calc(-10deg); width: 70%" />
       </div>
       <article>
         <div class="helmets">
-          <img src="assets/events-cut.png" alt="" />
-          <img src="assets/events-cut.png" alt="" />
-          <img src="assets/events-cut.png" alt="" />
+          <img
+            src="assets-about/helmet-jammer-active.png"
+            alt=""
+            onclick="changeText('JAMMER', 'The point scorer of the team. They aim to pass through opposing blockers scoring points for each opponent they legally pass. Jammers must be agile and swift to get through the pack.', 'assets-about/helmet-jammer-active.png', this)"
+            id="jammer-helmet"
+          />
+          <img
+            src="assets-about/helmet-blocker-regular.png"
+            alt=""
+            onclick="changeText('BLOCKERS', 'Blockers are the core defensive and offensive players on the track. With a maximum of four at a time - pivot included - their main objective is to block the opposing jammer while helping their own jammer in scoring points. They do not wear a helmet cover.', 'assets-about/helmet-blocker-active.png', this)"
+            id="blocker-helmet"
+          />
+          <img
+            src="assets-about/helmet-pivot-regular.png"
+            alt=""
+            onclick="changeText('PIVOT', 'Part of the blockers line, acts as the last line of defence and a strategic leader on the track. Responsible for setting the pace, coordinating plays, and guiding the team\'s movements. They can switch roles and become a jammer during the game if necessary.', 'assets-about/helmet-pivot-active.png', this)"
+            id="pivot-helmet"
+          />
         </div>
-        <div>
-          <h3>skater</h3>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus nostrum laudantium ipsa debitis cum dignissimos molestias id a quaerat nihil accusamus rem neque, tempora, laboriosam, ipsum inventore ad harum? Eum.</p>
+        <div class="helmet-text">
+          <h3 id="helmet-heading">JAMMER</h3>
+          <p id="helmet-paragraph">The point scorer of the team. They aim to pass through opposing blockers scoring points for each opponent they legally pass. Jammers must be agile and swift to get through the pack.</p>
         </div>
       </article>
     </section>

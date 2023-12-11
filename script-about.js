@@ -11,14 +11,25 @@ document.addEventListener("DOMContentLoaded", function () {
       image.addEventListener("click", () => {
         if (image.classList.contains("nso")) {
           popupTitle.textContent = "NSO";
-          popupContent.textContent = "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste voluptatem ut, vitae illum delectus magni pariatur architecto veniam quaerat et magnam nulla, harum quasi quos, iure deserunt hic officia dolorem?";
+          popupContent.textContent = "Behind the Scenes: NSOs play a crucial role in tracking scores, penalties, and timing during matches. They're volunteers and a vital part of the game day experience.";
         } else if (image.classList.contains("skaters")) {
-          popupTitle.textContent = "Skaters";
-          popupContent.textContent = "Content related to skaters.";
+          popupTitle.textContent = "SKATERS";
+          popupContent.textContent = "Did you know? Our skaters train relentlessly to improve their skills. We have practice sessions three times a week to perfect our strategy and teamwork.";
         } else if (image.classList.contains("ref")) {
-          popupTitle.textContent = "Referee";
-          popupContent.textContent = "Content related to referee.";
+          popupTitle.textContent = "REFS";
+          popupContent.textContent = "Fun Fact: A game requires a minimum of 10 referees to ensure fair play. Our referees come from various clubs, bringing diverse expertise to the game.";
         }
+        else if (image.classList.contains("commentators-2")) {
+          popupTitle.textContent = "COMMENTATORS";
+          popupContent.textContent = "Meet Our Voices: Commentators add excitement and context to the game, explaining the action to the audience. They're passionate volunteers who amplify the energy of the game.";
+        } else if (image.classList.contains("merch-bw")) {
+          popupTitle.textContent = "MERCH STAND";
+          popupContent.textContent = "Support Our Club: Run by dedicated volunteers, our merch stand offers a variety of items. Purchasing merch supports our club and helps fundraise for our activities.";
+        }
+        else if (image.classList.contains("penalty")) {
+          popupTitle.textContent = "PENALTY BOX";
+          popupContent.textContent = "Understanding Penalties: This is where skaters serve time for rule infractions. Penalties vary in severity and impact gameplay strategy.";
+        } 
   
         // Show the popup and overlay
         popup.classList.add("active");
@@ -33,6 +44,28 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
   
+
+
+
+  // Set initial values
+  document.getElementById('helmet-heading').innerText = 'JAMMER';
+  document.getElementById('helmet-paragraph').innerText = 'The point scorer of the team. They aim to pass through opposing blockers scoring points for each opponent they legally pass. Jammers must be agile and swift to get through the pack.';
+
+  function changeText(helmetType, description, activeImgSrc, clickedImg) {
+    // Update text and description
+    document.getElementById('helmet-heading').innerText = helmetType;
+    document.getElementById('helmet-paragraph').innerText = description;
+
+    // Deactivate all helmets
+    document.querySelectorAll('.helmets img').forEach(img => {
+      img.src = img.src.replace('-active', '-regular');
+    });
+
+    // Activate the clicked helmet
+    clickedImg.src = activeImgSrc;
+  }
+
+
 
   function swapClasses(clickedCard) {
     // Get references to all three cards
