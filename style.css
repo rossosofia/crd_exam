@@ -114,10 +114,10 @@ nav a:hover::after {
   transform-origin: bottom left;
 }
 /* ------------------ hero image ----------------------*/
-.hero-image {
-  max-width: 100vw;
+.hero-image img {
+  max-width: 100%;
+  height: auto;
 }
-
 /* ------------------ info ----------------------*/
 
 .info {
@@ -157,7 +157,7 @@ nav a:hover::after {
 
 /* ------------------ guidelines ----------------------*/
 .guidelines {
-  background-image: url(assets/guidelines.svg);
+  background-image: url(assets/section-background.png);
   background-repeat: no-repeat;
   background-size: cover;
   display: grid;
@@ -325,6 +325,10 @@ footer > div:nth-child(2) {
   nav ul {
     flex-direction: row;
     gap: 1rem;
+  }
+
+  .hero-image img {
+    content: url("assets/hero-image-mobile.png");
   }
   /* ------------------ info ----------------------*/
 
