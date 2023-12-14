@@ -21,15 +21,18 @@
 
     <header>
       <div>
-        <h1>A-bout</h1>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste voluptatem ut, vitae illum delectus magni pariatur architecto veniam quaerat et magnam nulla, harum quasi quos, iure deserunt hic officia dolorem?</p>
+        <h1>IT'S BOUT DAY!</h1>
+        <p>
+          In Roller Derby, each game is known as a bout. Bouts are pivotal moments in our club's life, where we showcase our efforts and compete against other teams. Curious to know more? Get ready to explore what makes our bout days so exciting and
+          engaging!
+        </p>
       </div>
     </header>
 
     <section class="game">
       <div class="title">
-        <h2>THE BASICS OF ROLLER DERBY</h2>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio sapiente, pariatur consequuntur deserunt eum dolor suscipit laborum rem. Optio labore sit consequatur pariatur illo eligendi alias repellat modi aliquid corporis?</p>
+        <h2>GET ON TRACK</h2>
+        <p>Your first step into a roller derby bout! A vibrant mix of people and activities are in full swing on the track. Click on the images to find out more.</p>
       </div>
       <div class="image-container">
         <img class="track" src="assets-about/track.png" alt="" />
@@ -48,62 +51,68 @@
         </div>
       </div>
     </section>
-    <section class="basics">
-      <div class="basics-title">
-        <h2>THE BASICS OF ROLLER DERBY</h2>
-        <p>
-          Roller derby involves two teams skating around a track. Each team has one jammer aiming to pass opponents to score points, while blockers work to stop the opposing jammer. A match consists of two 30-minute periods, split into shorter
-          segments called jams, each lasting a maximum of 2 minutes.
-        </p>
-        <img src="assets-about/track-skaters.png" alt="" style="rotate: calc(-10deg); width: 70%" />
-      </div>
-      <article>
-        <div class="helmets">
-          <img
-            src="assets-about/helmet-jammer-active.png"
-            alt=""
-            onclick="changeText('JAMMER', 'The point scorer of the team. They aim to pass through opposing blockers scoring points for each opponent they legally pass. Jammers must be agile and swift to get through the pack.', 'assets-about/helmet-jammer-active.png', this)"
-            id="jammer-helmet"
-          />
-          <img
-            src="assets-about/helmet-blocker-regular.png"
-            alt=""
-            onclick="changeText('BLOCKERS', 'Blockers are the core defensive and offensive players on the track. With a maximum of four at a time - pivot included - their main objective is to block the opposing jammer while helping their own jammer in scoring points. They do not wear a helmet cover.', 'assets-about/helmet-blocker-active.png', this)"
-            id="blocker-helmet"
-          />
-          <img
-            src="assets-about/helmet-pivot-regular.png"
-            alt=""
-            onclick="changeText('PIVOT', 'Part of the blockers line, acts as the last line of defence and a strategic leader on the track. Responsible for setting the pace, coordinating plays, and guiding the team\'s movements. They can switch roles and become a jammer during the game if necessary.', 'assets-about/helmet-pivot-active.png', this)"
-            id="pivot-helmet"
-          />
-        </div>
-        <div class="helmet-text">
-          <h3 id="helmet-heading">JAMMER</h3>
-          <p id="helmet-paragraph">The point scorer of the team. They aim to pass through opposing blockers scoring points for each opponent they legally pass. Jammers must be agile and swift to get through the pack.</p>
-        </div>
-      </article>
-    </section>
+
     <section class="questions">
       <div>
-        <article>
-          <h2>FREQUENTLY ASKED QUESTIONS</h2>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <article class="questions-title">
+          <h2>
+            FREQUENTLY <br />
+            ASKED <br />
+            QUESTIONS
+          </h2>
         </article>
         <article class="question-container">
           <div class="navigation-buttons">
             <button class="arrow left-arrow">&lt;</button>
           </div>
-          <img src="assets/events-cut.png" alt="" />
+
           <div class="question">
-            <h3>Question 1</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim quibusdam expedita iste...</p>
+            <h3>Where is the ball?</h3>
+            <p>Actually, roller derby doesn't have a ball. The whole game revolves around skaters racing around a track. Players earn points by skillfully passing opponents during the action-packed bouts.</p>
           </div>
           <div class="navigation-buttons">
             <button class="arrow right-arrow">&gt;</button>
           </div>
         </article>
       </div>
+    </section>
+    <section class="basics">
+      <div class="basics-title">
+        <h2>THE BASICS OF ROLLER DERBY</h2>
+        <p>
+          Roller derby involves two teams skating around a track. Each team has one jammer aiming to pass opponents to score points, while blockers work to stop the opposing jammer. A match consist of two two 30-minute periods, split into shorter
+          segments called jams, each lasting a maximum of 2 minutes.
+        </p>
+      </div>
+      <article>
+        <img class="track-basics" src="assets-about/track-skaters.png" alt="" />
+        <div class="helmets-container">
+          <div class="helmets">
+            <img
+              src="assets-about/helmet-jammer-active.png"
+              alt=""
+              onclick="changeText('JAMMER', 'The point scorer of the team. They aim to pass through opposing blockers scoring points for each opponent they legally pass. Jammers must be agile and swift to get through the pack.', 'assets-about/helmet-jammer-active.png', this)"
+              id="jammer-helmet"
+            />
+            <img
+              src="assets-about/helmet-blocker-regular.png"
+              alt=""
+              onclick="changeText('BLOCKERS', 'Blockers are the core defensive and offensive players on the track. With a maximum of four at a time - pivot included - their main objective is to block the opposing jammer while helping their own jammer in scoring points. They do not wear a helmet cover.', 'assets-about/helmet-blocker-active.png', this)"
+              id="blocker-helmet"
+            />
+            <img
+              src="assets-about/helmet-pivot-regular.png"
+              alt=""
+              onclick="changeText('PIVOT', 'Part of the blockers line, acts as the last line of defence and a strategic leader on the track. Responsible for setting the pace, coordinating plays, and guiding the team\'s movements. They can switch roles and become a jammer during the game if necessary.', 'assets-about/helmet-pivot-active.png', this)"
+              id="pivot-helmet"
+            />
+          </div>
+          <div class="helmet-text">
+            <h3 id="helmet-heading">JAMMER</h3>
+            <p id="helmet-paragraph">The point scorer of the team. They aim to pass through opposing blockers scoring points for each opponent they legally pass. Jammers must be agile and swift to get through the pack.</p>
+          </div>
+        </div>
+      </article>
     </section>
 
     <section class="fun-facts">

@@ -46,21 +46,22 @@ document.addEventListener("DOMContentLoaded", function () {
   
 
 
-
   function changeText(helmetType, description, activeImgSrc, clickedImg) {
     // Update text and description
     document.getElementById('helmet-heading').innerText = helmetType;
     document.getElementById('helmet-paragraph').innerText = description;
-
+  
     // Deactivate all helmets
     document.querySelectorAll('.helmets img').forEach(img => {
       img.src = img.src.replace('-active', '-regular');
+      img.style.opacity = '0.5'; // Set opacity to 50%
     });
-
+  
     // Activate the clicked helmet
     clickedImg.src = activeImgSrc;
+    clickedImg.style.opacity = '1'; // Set opacity to 100% for the clicked helmet
   }
-
+  
 
 
 
@@ -68,25 +69,24 @@ document.addEventListener("DOMContentLoaded", function () {
   document.addEventListener("DOMContentLoaded", function () {
     const questions = [
       {
-        imgSrc: "assets-about/nso.png",
-        question: "Question 1",
-        answer: "Answer to question 1...",
+        
+        question: "Where is the ball?",
+        answer: "Actually, roller derby doesn't have a ball. The whole game revolves around skaters racing around a track. Players earn points by skillfully passing opponents during the action-packed bouts.",
       },
       {
-        imgSrc: "assets-about/ref.png",
-        question: "Question 2",
-        answer: "Answer to question 2...",
+       
+        question: "So, do you throw some elbows?",
+        answer: "No elbow-throwing here! Roller derby's all about controlled hits using shoulders and hips for blocking opponents. It's more about strategy and skill than throwing elbows around.",
       },
       {
-        imgSrc: "assets-about/skaters.png",
-        question: "Question 3",
-        answer: "Answer to question 3...",
+        
+        question: "Is it as painful as it looks?",
+        answer: "Roller derby can be intense and physical, so bumps and falls do happen. However, with proper training, gear, and techniques, skaters aim to minimize injuries.It's a mix of adrenaline and occasional bruises, but the thrill outweighs the pain for many!",
       },
     ];
   
     let currentQuestionIndex = 0;
     const questionContainer = document.querySelector(".question-container");
-    const imgElement = questionContainer.querySelector("img");
     const h3Element = questionContainer.querySelector("h3");
     const pElement = questionContainer.querySelector("p");
     const leftArrow = document.querySelector(".left-arrow");
@@ -94,7 +94,6 @@ document.addEventListener("DOMContentLoaded", function () {
   
     function showQuestion(index) {
       const currentQuestion = questions[index];
-      imgElement.src = currentQuestion.imgSrc;
       h3Element.textContent = currentQuestion.question;
       pElement.textContent = currentQuestion.answer;
     }
