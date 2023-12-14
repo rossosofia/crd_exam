@@ -257,7 +257,7 @@ header div {
 
 .basics {
   display: grid;
-  grid-template-columns: 1fr 6fr 1fr;
+  grid-template-columns: 2fr 6fr 2fr;
   grid-template-rows: 1fr 1fr;
   gap: 1.5rem;
   padding-top: 3rem;
@@ -276,7 +276,7 @@ header div {
 }
 .track-basics {
   rotate: calc(-35deg);
-  width: 50%;
+  width: 100%;
   height: auto;
 }
 .basics article {
@@ -301,20 +301,20 @@ header div {
 }
 
 #jammer-helmet {
-  top: -40%;
+  top: -60%;
   left: 50%;
   transform: translateX(-50%);
 }
 
 #blocker-helmet {
-  bottom: 0;
+  bottom: -20%;
   left: 35%;
   transform: translateX(-50%);
   opacity: 0.5;
 }
 
 #pivot-helmet {
-  bottom: 0%;
+  bottom: -20%;
   right: 35%;
   transform: translateX(50%);
   opacity: 0.5;
@@ -327,9 +327,7 @@ header div {
   position: absolute;
   transition: filter 0.3s, transform 0.3s;
 }
-.helmets img:hover {
-  transform: scale(1.2); /* Scale up on hover */
-}
+
 .helmet-text {
   display: flex;
   flex-direction: column;
