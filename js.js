@@ -3,7 +3,7 @@
 window.addEventListener("DOMContentLoaded", start);
 
 let allMembers = [];
-let globalObject = { filterBy: "*" };
+let globalObject = { filterBy: "team-a" };
 
 const Member = {
   league: "",

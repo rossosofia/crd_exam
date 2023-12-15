@@ -164,8 +164,8 @@ article {
 .active::after {
   content: url("assets/line.png");
   position: absolute;
-  top: 0;
-  left: -100%;
+  top: 100%;
+  left: 0%;
 }
 
 /* ------------------  ----------------------*/
