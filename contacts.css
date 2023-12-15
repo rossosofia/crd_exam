@@ -75,4 +75,26 @@ header div {
 }
 
 @media screen and (max-width: 768px) {
+  header {
+    grid-template-columns: 1fr;
+    padding-inline: 2rem;
+  }
+
+  header div {
+    grid-area: auto;
+  }
+
+  /* .background-container {
+    display: none; 
+  } */
+
+  .card-container {
+    grid-template-columns: 1fr;
+    padding-inline: 2rem;
+  }
+
+  .card {
+    grid-column: auto; /* Remove the explicit grid column */
+    grid-row: auto; /* Remove the explicit grid row */
+  }
 }
