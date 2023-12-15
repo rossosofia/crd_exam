@@ -146,7 +146,6 @@
   background-color: var(--black);
   flex: 1;
   max-width: 100%;
-
   margin: 1rem;
 }
 
@@ -265,7 +264,12 @@
     margin-left: auto;
   }
 
-  .games {
-    grid-template-columns: 1fr;
+  .games-container {
+    padding-block-end: 5rem;
+  }
+
+  .games div {
+    flex: 1 0 100%;
+    max-width: 100%;
   }
 }
