@@ -54,7 +54,10 @@ body {
   background-color: var(--light-yellow);
   font-family: "Akzidenz-Grotesk-Regular";
 }
-
+h1 {
+  font-family: "Akzidenz-Grotesk-Extended";
+  font-weight: bold;
+}
 h2 {
   font-family: "Akzidenz-Grotesk-Extended";
   font-weight: bold;
