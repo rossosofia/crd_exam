@@ -113,6 +113,7 @@ nav a:hover::after {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
+
 /* ------------------ hero image ----------------------*/
 .hero-image img {
   max-width: 100%;
