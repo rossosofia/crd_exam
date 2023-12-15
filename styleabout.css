@@ -344,9 +344,8 @@ header div {
 .questions {
   display: grid;
   grid-template-columns: 2fr 6fr 2fr;
-  gap: 1.5rem;
-  padding-bottom: 5rem;
-  padding-top: 3rem;
+  margin-top: 8rem;
+  gap: 3rem;
 }
 
 .questions > div:first-child {
@@ -500,12 +499,6 @@ header div {
   0% {
     transform: translateY(0) scale(1);
   }
-  25% {
-    transform: translateY(-5%) scale(1.02);
-  }
-  50% {
-    transform: translateY(-10%) scale(1.05);
-  }
   75% {
     transform: translateY(-5%) scale(1.03);
   }
@@ -645,6 +638,8 @@ footer > div:nth-child(2) {
     grid-template-columns: 5% 90% 5%;
     padding-bottom: 1rem;
     padding-top: 1rem;
+    margin-top: 1rem;
+
     gap: 2rem;
     justify-content: center;
   }
