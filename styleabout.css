@@ -417,9 +417,8 @@ header div {
 
   header {
     display: grid;
-    grid-template-columns: 1fr 6fr 1fr;
-    padding-top: 1rem;
-    padding-bottom: 0;
+    grid-template-columns: 1fr;
+    padding: 2rem;
   }
 
   header div {
@@ -429,11 +428,13 @@ header div {
   /* ------------------ game ----------------------*/
 
   .game {
-    grid-template-columns: 1fr 6fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: 30% 70%;
-    padding-top: 3rem;
-    padding-bottom: 2rem;
+    padding: 2rem;
+    gap: 2rem;
     text-align: center;
+    justify-content: center;
+    align-items: center;
   }
   .title {
     grid-area: 1/2;
@@ -512,11 +513,10 @@ header div {
   /* ------------------ basics ----------------------*/
   .basics {
     display: grid;
-    grid-template-columns: 2fr 6fr 2fr;
+    grid-template-columns: 1fr;
     grid-template-rows: 30% 70%;
     gap: 1rem;
-    padding-top: 3rem;
-    padding-bottom: 1rem;
+    padding: 2rem;
   }
   .basics-title {
     grid-area: 1/2;
@@ -531,7 +531,7 @@ header div {
   .track-basics {
     rotate: calc(-20deg);
     width: auto;
-    height: 20vh;
+    height: 30vh;
     justify-self: center;
   }
   .helmets-container {
@@ -555,16 +555,16 @@ header div {
   .helmet-text {
     height: 100%;
     width: 100%;
+    padding-inline: 2rem;
   }
 
   /* ------------------ fun facts ----------------------*/
 
   .fun-facts {
     display: grid;
-    grid-template-columns: 1fr 6fr 1fr;
+    grid-template-columns: 1fr;
     gap: 1rem;
-    padding-top: 3rem;
-    padding-bottom: 1rem;
+    padding: 2rem;
   }
 
   .fun-facts > div {
@@ -577,8 +577,8 @@ header div {
   }
   .cards-container {
     position: relative;
-    height: 30vh;
-    width: 50vw;
+    height: 20rem;
+    width: 20rem;
     justify-items: center;
     align-items: center;
   }
