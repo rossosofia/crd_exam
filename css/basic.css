@@ -92,7 +92,8 @@ nav a {
 }
 
 .active-nav {
-  font-weight: bold;
+  font-weight: bolder;
+  color: var(--black);
 }
 
 nav a::after {
