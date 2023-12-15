@@ -140,5 +140,5 @@ document.addEventListener("DOMContentLoaded", function () {
       card1.className = class3;
       card2.className = class1;
       card3.className = class2;
-    }, 500); // 500 milliseconds is the duration of the animation
+    }, 400); // 500 milliseconds is the duration of the animation
   }
