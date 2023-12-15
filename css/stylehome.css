@@ -1,41 +1,8 @@
-/* Global Styles */
-body {
-  margin: 0;
-  padding: 0;
-  font-family: "Arial", sans-serif;
-}
-
-/* Navigation Styles */
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
-  background-color: #333;
-  color: white;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-}
-
-nav ul li {
-  margin: 0 1rem;
-}
-
-nav a {
-  text-decoration: none;
-  color: white;
-}
-
-/* Hero Image Styles */
 .hero-image img {
   max-width: 100%;
   height: auto;
 }
 
-/* Info Section Styles */
 .info {
   display: grid;
   grid-template-columns: 1fr 4fr 4fr 1fr;
@@ -74,7 +41,6 @@ nav a {
   grid-area: 2/3;
 }
 
-/* Guidelines Section Styles */
 .guidelines {
   background-image: url(../assets/section-background.png);
   background-repeat: no-repeat;
@@ -99,7 +65,6 @@ nav a {
   text-align: center;
 }
 
-/* Join Us Section Styles */
 .join-us {
   display: grid;
   grid-template-columns: 1fr 4fr 4fr 1fr;
@@ -126,17 +91,17 @@ nav a {
 
 .join-us a {
   text-decoration: none;
-  color: black;
+  color: var(--black);
   position: relative;
 }
 
 .join-us a::after {
-  content: url("./assets/line.png");
+  content: url("../assets/line.png");
   position: absolute;
   left: -2.5rem;
+  top: 100%;
 }
 
-/* Upcoming Events Section Styles */
 .upcoming-events {
   display: grid;
   grid-template-columns: 1fr 3fr 3fr 3fr 1fr;
@@ -224,10 +189,9 @@ nav a {
   color: var(--mustard);
 }
 
-/* Media Query for Smaller Screens */
 @media screen and (max-width: 768px) {
   .hero-image img {
-    content: url("./assets/hero-image-mobile.png");
+    content: url("../assets/hero-image-mobile.png");
   }
 
   .info {
@@ -305,26 +269,3 @@ nav a {
     grid-template-columns: 1fr;
   }
 }
-
-/* Footer Styles */
-footer {
-  display: flex;
-  justify-content: space-between;
-  padding: 2rem;
-  background-color: #333;
-  color: white;
-}
-
-footer div {
-  flex: 1;
-}
-
-.photographers a {
-  margin-right: 1rem;
-}
-
-.footer-links a {
-  margin-right: 1rem;
-}
-
-/* Add any additional styles for the footer as needed */
