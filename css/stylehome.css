@@ -1,46 +1,3 @@
-@font-face {
-  font-family: "Akzidenz-Grotesk-Regular";
-  src: url("./fonts/AKZIDENZ-GROTESK-PRO-LIGHT-REGULAR.OTF");
-  font-weight: light;
-}
-
-@font-face {
-  font-family: "Akzidenz-Grotesk-Regular";
-  src: url("./fonts/AKZIDENZ-GROTESK-PRO-REGULAR-REGULAR.OTF");
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: "Akzidenz-Grotesk-Regular";
-  src: url("/fonts/AKZIDENZ-GROTESK-PRO-MED-REGULAR.OTF");
-  font-weight: bold;
-}
-
-@font-face {
-  font-family: "Akzidenz-Grotesk-Extended";
-  src: url("./fonts/AKZIDENZ-GROTESK-PRO-LIGHT-EXT-REGULAR.OTF");
-  font-weight: light;
-}
-
-@font-face {
-  font-family: "Akzidenz-Grotesk-Extended";
-  src: url("./fonts/AKZIDENZ-GROTESK-PRO-MED-EXT-REGULAR.OTF");
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: "Akzidenz-Grotesk-Extended";
-  src: url("./fonts/AKZIDENZ-GROTESK-PRO-BOLD-EXT-REGULAR.OTF");
-  font-weight: bold;
-}
-
-:root {
-  --black: #1e1e1e;
-  --gray: #9a9a9a;
-  --mustard: #e5b635;
-  --light-yellow: #fbf0d0;
-}
-
 /* ------------------ hero image ----------------------*/
 .hero-image img {
   max-width: 100%;
@@ -85,7 +42,7 @@
 
 /* ------------------ guidelines ----------------------*/
 .guidelines {
-  background-image: url(./assets/section-background.png);
+  background-image: url(../assets/section-background.png);
   background-repeat: no-repeat;
   background-size: cover;
   display: grid;
@@ -141,7 +98,7 @@
 }
 
 .join-us a::after {
-  content: url("assets/line.png");
+  content: url("../assets/line.png");
   position: absolute;
   left: -2.5rem;
 }
@@ -206,7 +163,7 @@
 
 @media screen and (max-width: 768px) {
   .hero-image img {
-    content: url("./assets/hero-image-mobile.png");
+    content: url("../assets/hero-image-mobile.png");
   }
   /* ------------------ info ----------------------*/
 

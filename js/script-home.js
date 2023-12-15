@@ -9,7 +9,7 @@ function setup() {
 
 
 function getGames() {
-  fetch(`games.json`)
+  fetch(`./games.json`)
     .then(res => res.json())
     .then(data => {
       setupGames(data);
