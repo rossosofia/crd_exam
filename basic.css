@@ -1,36 +1,36 @@
 @font-face {
   font-family: "Akzidenz-Grotesk-Regular";
-  src: url("./fonts/AKZIDENZ-GROTESK-PRO-LIGHT-REGULAR.OTF");
+  src: url("fonts/AKZIDENZ-GROTESK-PRO-LIGHT-REGULAR.OTF");
   font-weight: light;
 }
 
 @font-face {
   font-family: "Akzidenz-Grotesk-Regular";
-  src: url("../fonts/AKZIDENZ-GROTESK-PRO-REGULAR-REGULAR.OTF");
+  src: url("fonts/AKZIDENZ-GROTESK-PRO-REGULAR-REGULAR.OTF");
   font-weight: normal;
 }
 
 @font-face {
   font-family: "Akzidenz-Grotesk-Regular";
-  src: url("../fonts/AKZIDENZ-GROTESK-PRO-MED-REGULAR.OTF");
+  src: url("fonts/AKZIDENZ-GROTESK-PRO-MED-REGULAR.OTF");
   font-weight: bold;
 }
 
 @font-face {
   font-family: "Akzidenz-Grotesk-Extended";
-  src: url("../fonts/AKZIDENZ-GROTESK-PRO-LIGHT-EXT-REGULAR.OTF");
+  src: url("fonts/AKZIDENZ-GROTESK-PRO-LIGHT-EXT-REGULAR.OTF");
   font-weight: light;
 }
 
 @font-face {
   font-family: "Akzidenz-Grotesk-Extended";
-  src: url("../fonts/AKZIDENZ-GROTESK-PRO-MED-EXT-REGULAR.OTF");
+  src: url("fonts/AKZIDENZ-GROTESK-PRO-MED-EXT-REGULAR.OTF");
   font-weight: normal;
 }
 
 @font-face {
   font-family: "Akzidenz-Grotesk-Extended";
-  src: url("../fonts/AKZIDENZ-GROTESK-PRO-BOLD-EXT-REGULAR.OTF");
+  src: url("fonts/AKZIDENZ-GROTESK-PRO-BOLD-EXT-REGULAR.OTF");
   font-weight: bold;
 }
 

@@ -42,7 +42,7 @@
 }
 
 .guidelines {
-  background-image: url(../assets/section-background.png);
+  background-image: url(assets/section-background.png);
   background-repeat: no-repeat;
   background-size: cover;
   display: grid;
@@ -96,7 +96,7 @@
 }
 
 .join-us a::after {
-  content: url("../assets/line.png");
+  content: url("assets/line.png");
   position: absolute;
   left: -2.5rem;
   top: 100%;
@@ -116,7 +116,7 @@
 }
 
 .upcoming-events > div:nth-of-type(1) h2 {
-  color: #333;
+  color: var(--black);
   grid-column: 1 / span 2;
   align-items: center;
   font-size: 4rem;
@@ -191,7 +191,7 @@
 
 @media screen and (max-width: 768px) {
   .hero-image img {
-    content: url("../assets/hero-image-mobile.png");
+    content: url("assets/hero-image-mobile.png");
   }
 
   .info {

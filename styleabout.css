@@ -289,18 +289,18 @@ header div {
   border: none;
   padding: 0;
   cursor: pointer;
-  width: 40px; /* Adjust the width to fit your arrow images */
-  height: 40px; /* Adjust the height to fit your arrow images */
+  width: 40px;
+  height: 40px;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .left-arrow {
-  background-image: url("../assets-about/left-arrow.png");
+  background-image: url("assets-about/left-arrow.png");
 }
 
 .right-arrow {
-  background-image: url("../assets-about/right-arrow.png");
+  background-image: url("assets-about/right-arrow.png");
 }
 
 .navigation-buttons button::after {
@@ -597,7 +597,6 @@ header div {
 
   .mustard-square p {
     text-align: left;
-
     margin-inline: 0;
   }
 }

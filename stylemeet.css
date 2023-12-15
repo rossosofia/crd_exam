@@ -53,7 +53,7 @@ article {
 }
 
 .active::after {
-  content: url("../assets/line.png");
+  content: url("assets/line.png");
   position: absolute;
   top: 100%;
   left: 0%;
