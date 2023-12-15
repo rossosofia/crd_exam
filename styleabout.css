@@ -55,6 +55,44 @@ header div {
   display: flex;
   flex-direction: column;
 }
+
+.click-them {
+  grid-area: 1/3;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.click-them p {
+  display: inline-block;
+  font-weight: bolder;
+  color: var(--black);
+  position: relative;
+  animation: arrowAnimation 1s infinite;
+}
+
+.click-them p::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -10px;
+  border-width: 15px;
+  border-style: solid;
+  border-color: var(--mustard) transparent transparent transparent;
+  transform: rotate(180deg);
+  animation: arrowAnimation 1s infinite;
+}
+
+@keyframes arrowAnimation {
+  0%,
+  50% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(10px);
+  }
+}
+
 .image-container {
   position: relative;
   grid-area: 2/2/3/4;
@@ -212,24 +250,33 @@ header div {
   position: absolute;
   transition: filter 0.3s, transform 0.3s;
 }
+.helmets img:not(:hover) {
+  animation: scale 4s linear infinite;
+}
+@keyframes scale {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
 
 #jammer-helmet {
   top: -50%;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 40%;
 }
 
 #blocker-helmet {
   bottom: 0%;
-  left: 30%;
-  transform: translateX(-50%);
+  left: 10%;
   opacity: 0.5;
 }
 
 #pivot-helmet {
   bottom: 0%;
-  right: 30%;
-  transform: translateX(50%);
+  right: 0%;
   opacity: 0.5;
 }
 
@@ -429,7 +476,7 @@ header div {
 
   .game {
     grid-template-columns: 1fr;
-    grid-template-rows: 30% 70%;
+    grid-template-rows: 1fr 1fr 3fr;
     padding: 2rem;
     gap: 2rem;
     text-align: center;
@@ -437,15 +484,19 @@ header div {
     align-items: center;
   }
   .title {
-    grid-area: 1/2;
+    grid-row: 1;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
+  .click-them {
+    grid-row: 2;
+    text-align: center;
+  }
   .image-container {
     position: relative;
-    grid-area: 2/2;
+    grid-row: 3;
     display: flex;
     align-items: center;
     justify-content: center;
