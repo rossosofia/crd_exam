@@ -1,39 +1,3 @@
-@font-face {
-  font-family: "Akzidenz-Grotesk-Regular";
-  src: url("./fonts/AKZIDENZ-GROTESK-PRO-LIGHT-REGULAR.OTF");
-  font-weight: light;
-}
-
-@font-face {
-  font-family: "Akzidenz-Grotesk-Regular";
-  src: url("./fonts/AKZIDENZ-GROTESK-PRO-REGULAR-REGULAR.OTF");
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: "Akzidenz-Grotesk-Regular";
-  src: url("/fonts/AKZIDENZ-GROTESK-PRO-MED-REGULAR.OTF");
-  font-weight: bold;
-}
-
-@font-face {
-  font-family: "Akzidenz-Grotesk-Extended";
-  src: url("./fonts/AKZIDENZ-GROTESK-PRO-LIGHT-EXT-REGULAR.OTF");
-  font-weight: light;
-}
-
-@font-face {
-  font-family: "Akzidenz-Grotesk-Extended";
-  src: url("./fonts/AKZIDENZ-GROTESK-PRO-MED-EXT-REGULAR.OTF");
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: "Akzidenz-Grotesk-Extended";
-  src: url("./fonts/AKZIDENZ-GROTESK-PRO-BOLD-EXT-REGULAR.OTF");
-  font-weight: bold;
-}
-
 :root {
   --black: #1e1e1e;
   --gray: #9a9a9a;
@@ -41,7 +5,7 @@
   --light-yellow: #fbf0d0;
 }
 
-/* Header styling */
+/* ------------header---------------------- */
 header {
   text-align: center;
   padding-block: 2rem;
@@ -62,12 +26,12 @@ header div {
   width: 100%;
   height: 100%;
   z-index: -1;
-  background-image: url("assets/contacts.png");
+  background-image: url("../assets/contacts.png");
   background-size: cover;
   background-position: center;
   opacity: 20%;
 }
-/* Card container styling */
+
 .card-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -78,7 +42,6 @@ header div {
   z-index: 1;
 }
 
-/* Card styling */
 .card {
   border: 1px solid var(--gray);
   display: flex;
@@ -91,8 +54,6 @@ header div {
   background-color: var(--light-yellow);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
-
-  /* Make each card span the middle column and one row */
   grid-column: 2 / span 1;
   grid-row: auto / span 1;
 }
