@@ -1,10 +1,41 @@
-/* ------------------ hero image ----------------------*/
+/* Global Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+}
+
+/* Navigation Styles */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #333;
+  color: white;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin: 0 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+}
+
+/* Hero Image Styles */
 .hero-image img {
   max-width: 100%;
   height: auto;
 }
-/* ------------------ info ----------------------*/
 
+/* Info Section Styles */
 .info {
   display: grid;
   grid-template-columns: 1fr 4fr 4fr 1fr;
@@ -20,15 +51,18 @@
   flex-direction: column;
   gap: 1rem;
 }
+
 .info > div:nth-child(1) {
   grid-area: 1/2;
 }
+
 .info > img:nth-of-type(1) {
   grid-area: 1/3;
   justify-content: center;
   align-self: center;
   max-width: 100%;
 }
+
 .info > img:nth-of-type(2) {
   grid-area: 2/2;
   justify-content: center;
@@ -40,7 +74,7 @@
   grid-area: 2/3;
 }
 
-/* ------------------ guidelines ----------------------*/
+/* Guidelines Section Styles */
 .guidelines {
   background-image: url(../assets/section-background.png);
   background-repeat: no-repeat;
@@ -52,7 +86,7 @@
   justify-content: center;
   text-align: center;
   padding-top: 3rem;
-  min-height: 100vh; /* maybe i can play with that */
+  min-height: 100vh;
 }
 
 .guidelines > div:nth-of-type(1) {
@@ -65,7 +99,7 @@
   text-align: center;
 }
 
-/* ------------------ join us ----------------------*/
+/* Join Us Section Styles */
 .join-us {
   display: grid;
   grid-template-columns: 1fr 4fr 4fr 1fr;
@@ -77,7 +111,6 @@
 .join-us div {
   grid-area: 1/3;
   justify-content: center;
-
   text-align: left;
   display: flex;
   flex-direction: column;
@@ -98,17 +131,12 @@
 }
 
 .join-us a::after {
-  content: url("../assets/line.png");
+  content: url("./assets/line.png");
   position: absolute;
   left: -2.5rem;
 }
-/* ------------------ upcoming events ----------------------*/
 
-.upcoming-events {
-  display: grid;
-  grid-template-columns: 1fr 3fr 3fr 3fr 1fr;
-}
-
+/* Upcoming Events Section Styles */
 .upcoming-events {
   display: grid;
   grid-template-columns: 1fr 3fr 3fr 3fr 1fr;
@@ -144,28 +172,63 @@
 }
 
 .games {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 4rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .games div {
   background-color: var(--black);
   flex: 1;
   max-width: 100%;
-  height: 25rem;
+
+  margin: 1rem;
 }
 
 .games img {
   width: 100%;
   height: auto;
 }
+.games p.gameType {
+  padding: 1rem;
+  font-weight: bold;
+}
+.games p.date {
+  padding-inline-start: 1rem;
+  color: var(--mustard);
+}
 
+.games h2,
+.games p.location,
+.games p.teams {
+  padding-inline-start: 1rem;
+}
+.buttons {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 1rem;
+}
+
+.buttons a.button {
+  padding: 0.3rem 0.8rem;
+  background-color: var(--mustard);
+  color: var(--black);
+  text-decoration: none;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.buttons a.button:hover {
+  background-color: var(--black);
+  color: var(--mustard);
+}
+
+/* Media Query for Smaller Screens */
 @media screen and (max-width: 768px) {
   .hero-image img {
-    content: url("../assets/hero-image-mobile.png");
+    content: url("./assets/hero-image-mobile.png");
   }
-  /* ------------------ info ----------------------*/
 
   .info {
     display: grid;
@@ -179,13 +242,16 @@
   .info > div:nth-of-type(2) {
     gap: 0.5rem;
   }
+
   .info > div:nth-child(1) {
     grid-area: 2/2;
   }
+
   .info > img:nth-of-type(1) {
     grid-area: 1/2;
     max-width: 80%;
   }
+
   .info > img:nth-of-type(2) {
     grid-area: 3/2;
     max-width: 80%;
@@ -194,7 +260,6 @@
   .info > div:nth-of-type(2) {
     grid-area: 4/2;
   }
-  /* ------------------ guidelines ----------------------*/
 
   .guidelines {
     grid-template-columns: 1fr;
@@ -204,7 +269,7 @@
   .guidelines > div:nth-of-type(1) {
     order: 2;
   }
-  /* ------------------ join us ----------------------*/
+
   .join-us {
     display: grid;
     grid-template-columns: 1fr 4fr 1fr;
@@ -219,7 +284,6 @@
     grid-area: 1/2;
     max-width: 100%;
   }
-  /* ------------------ upcoming events ----------------------*/
 
   .upcoming-events > div:nth-of-type(1) {
     grid-template-columns: 1fr;
@@ -241,3 +305,26 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* Footer Styles */
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  background-color: #333;
+  color: white;
+}
+
+footer div {
+  flex: 1;
+}
+
+.photographers a {
+  margin-right: 1rem;
+}
+
+.footer-links a {
+  margin-right: 1rem;
+}
+
+/* Add any additional styles for the footer as needed */
