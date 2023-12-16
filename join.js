@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function () {
     leftArrow.addEventListener("click", navigateLeft);
     rightArrow.addEventListener("click", navigateRight);
   
-    // Show initial question
+
     showQuestion(currentQuestionIndex);
   });
   

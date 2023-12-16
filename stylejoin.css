@@ -16,7 +16,7 @@ header div {
   text-align: center;
   gap: 1rem;
 }
-a {
+header a {
   color: var(--mustard);
   text-decoration: none;
   font-weight: bolder;

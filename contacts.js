@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
   
     const cardContainer = document.getElementById("cardContainer");
   
-    // Add cards
+   
     cardsData.forEach((cardData) => {
       const card = document.createElement("div");
       card.className = "card";

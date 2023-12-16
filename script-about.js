@@ -31,14 +31,14 @@ document.addEventListener("DOMContentLoaded", function () {
         popupContent.textContent = "Understanding Penalties: This is where skaters serve time for rule infractions. Penalties vary in severity and impact gameplay strategy.";
       } 
 
-      // Show the popup and overlay
+     
       popup.classList.add("active");
       overlay.classList.add("active");
     });
   });
 
   closeBtn.addEventListener("click", () => {
-    // Close the popup and overlay
+   
     popup.classList.remove("active");
     overlay.classList.remove("active");
   });
@@ -47,19 +47,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
   function changeText(helmetType, description, activeImgSrc, clickedImg) {
-    // Update text and description
+  
     document.getElementById('helmet-heading').innerText = helmetType;
     document.getElementById('helmet-paragraph').innerText = description;
   
-    // Deactivate all helmets
+  
     document.querySelectorAll('.helmets img').forEach(img => {
       img.src = img.src.replace('-active', '-regular');
       img.style.opacity = '0.5'; // Set opacity to 50%
     });
   
-    // Activate the clicked helmet
+
     clickedImg.src = activeImgSrc;
-    clickedImg.style.opacity = '1'; // Set opacity to 100% for the clicked helmet
+    clickedImg.style.opacity = '1'; 
   }
   
 
@@ -111,31 +111,31 @@ document.addEventListener("DOMContentLoaded", function () {
     leftArrow.addEventListener("click", navigateLeft);
     rightArrow.addEventListener("click", navigateRight);
   
-    // Show initial question
+  
     showQuestion(currentQuestionIndex);
   });
   
 
   function swapClasses(clickedCard) {
-    // Get references to all three cards
+   
     const card1 = document.getElementById('card1');
     const card2 = document.getElementById('card2');
     const card3 = document.getElementById('card3');
 
-    // Remove the clicked class from all cards
+
     card1.classList.remove('card-clicked');
     card2.classList.remove('card-clicked');
     card3.classList.remove('card-clicked');
 
-    // Add the clicked class to the clicked card
+
     clickedCard.classList.add('card-clicked');
 
-    // Get the current classes of each card
+
     const class1 = card1.className;
     const class2 = card2.className;
     const class3 = card3.className;
 
-    // Swap the classes after a short delay to allow the animation to play
+   
     setTimeout(() => {
       card1.className = class3;
       card2.className = class1;
