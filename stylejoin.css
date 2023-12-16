@@ -16,7 +16,35 @@ header div {
   text-align: center;
   gap: 1rem;
 }
+a {
+  color: var(--mustard);
+  text-decoration: none;
+  font-weight: bolder;
+}
 
+/* ------------------ cards ----------------------*/
+.card-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: repeat(4, 1fr);
+  gap: 2rem;
+  padding-block-end: 2rem;
+}
+.card {
+  border: 1px solid var(--gray);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  padding: 2rem;
+  background-color: var(--light-yellow);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  grid-column: 2 / span 1;
+  grid-row: auto / span 1;
+}
 /* ------------------ questions ----------------------*/
 
 .questions {
