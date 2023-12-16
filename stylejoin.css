@@ -119,4 +119,11 @@ header a {
     padding: 2rem;
     gap: 3rem;
   }
+  .card-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 2rem;
+    padding: 1rem;
+  }
 }
