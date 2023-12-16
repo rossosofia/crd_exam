@@ -162,9 +162,9 @@ footer > div:nth-child(2) {
   line-height: 30px;
   text-align: center;
   border-radius: 50%;
-  background-color: var(--light-yellow); /* Change the background color to your preference */
-  color: var(--black); /* Change the text color to your preference */
-  text-decoration: none; /* Remove the default underline */
+  background-color: var(--light-yellow);
+  color: var(--black);
+  text-decoration: none;
 }
 
 @media screen and (max-width: 768px) {

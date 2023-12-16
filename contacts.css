@@ -91,10 +91,11 @@ header div {
   .card-container {
     grid-template-columns: 1fr;
     padding-inline: 2rem;
+    justify-content: center;
   }
 
   .card {
-    grid-column: auto; /* Remove the explicit grid column */
-    grid-row: auto; /* Remove the explicit grid row */
+    grid-column: auto;
+    grid-row: auto;
   }
 }
