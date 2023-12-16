@@ -98,10 +98,10 @@
 .join-us a::after {
   content: url("assets/line.png");
   position: absolute;
-  left: -2.5rem;
-  top: 100%;
+  left: 0.5rem;
+  top: 1rem;
 }
-
+/* -------------------------------- */
 .upcoming-events {
   display: grid;
   grid-template-columns: 1fr 3fr 3fr 3fr 1fr;
@@ -111,7 +111,7 @@
   grid-area: 1/2/2/5;
   display: grid;
   grid-template-columns: 3fr 3fr 3fr;
-  gap: 1rem;
+  /* gap: 1rem; */
   align-items: center;
 }
 
@@ -146,7 +146,8 @@
   background-color: var(--black);
   flex: 1;
   max-width: 100%;
-  margin: 1rem;
+  margin-bottom: 1rem;
+  margin-inline: 1rem;
 }
 
 .games img {
@@ -169,7 +170,8 @@
 }
 .buttons {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: flex-start;
+  gap: 2rem;
   margin-top: 1rem;
 }
 

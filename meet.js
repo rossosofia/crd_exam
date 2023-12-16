@@ -108,10 +108,10 @@ function displayList(members) {
 function displayMember(member) {
   const clone = document.querySelector("template").content.cloneNode(true);
 
-  clone.querySelector("#image").src = `pictures/${member.picture_name}.jpg`;
-  
+  clone.querySelector(".member-image").src = `pictures/${member.picture_name}.jpg`;
   clone.querySelector("[data-field=name]").textContent = member.name;
   clone.querySelector("[data-field=number]").textContent = "#" + member.number;
 
   document.querySelector("#list").appendChild(clone);
 }
+
