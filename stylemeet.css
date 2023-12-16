@@ -67,11 +67,12 @@ article {
   flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
+  padding: 2rem;
 }
 
 .members {
   width: 100%;
-  max-width: 280px;
+  max-width: 220px;
   padding-block-end: 2rem;
 }
 
@@ -87,4 +88,9 @@ article {
   object-fit: cover;
   margin-bottom: 0.5rem;
   aspect-ratio: 2/3;
+}
+@media screen and (max-width: 768px) {
+  #list {
+    padding: 0rem;
+  }
 }
