@@ -8,11 +8,11 @@
         "teams":"Team A vs Team B",
         "button1": {
           "text": "Stream",
-          "link": "https://example.com/tickets"
+          "link": "https://www.facebook.com/copenhagenrollerderby"
         },
         "button2": {
           "text": "MORE INFO",
-          "link": "https://example.com/more-info"
+          "link": "https://www.facebook.com/copenhagenrollerderby"
         }
       },
     {
@@ -24,11 +24,11 @@
       "teams":"Team A vs Team B",
       "button1": {
         "text": "Stream",
-        "link": "https://example.com/tickets"
+        "link": "https://www.facebook.com/copenhagenrollerderby"
       },
       "button2": {
         "text": "MORE INFO",
-        "link": "https://example.com/more-info"
+        "link": "https://www.facebook.com/copenhagenrollerderby"
       }
 
 
@@ -46,11 +46,11 @@
 
       "button1": {
         "text": "Stream",
-        "link": "https://example.com/tickets"
+        "link": "https://www.facebook.com/copenhagenrollerderby"
       },
       "button2": {
         "text": "MORE INFO",
-        "link": "https://example.com/more-info"
+        "link": "https://www.facebook.com/copenhagenrollerderby"
       }
 
     

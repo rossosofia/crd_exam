@@ -90,6 +90,11 @@ article {
   aspect-ratio: 2/3;
 }
 @media screen and (max-width: 768px) {
+  article {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
   #list {
     padding: 0rem;
   }
