@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const popupContent = document.querySelector(".popup p");
   const closeBtn = document.querySelector(".popup-close-btn");
   const overlay = document.querySelector(".overlay");
-  const mainContent = document.querySelector("main"); /* Update with your main content selector */
+  const mainContent = document.querySelector("main");
 
   images.forEach((image) => {
     image.addEventListener("click", () => {
@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
   
     document.querySelectorAll('.helmets img').forEach(img => {
       img.src = img.src.replace('-active', '-regular');
-      img.style.opacity = '0.5'; // Set opacity to 50%
+      img.style.opacity = '0.5';
     });
   
 
@@ -67,6 +67,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
   document.addEventListener("DOMContentLoaded", function () {
+
+
     const questions = [
       {
         
@@ -85,6 +87,7 @@ document.addEventListener("DOMContentLoaded", function () {
       },
     ];
   
+    
     let currentQuestionIndex = 0;
     const questionContainer = document.querySelector(".question-container");
     const h3Element = questionContainer.querySelector("h3");
