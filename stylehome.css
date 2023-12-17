@@ -180,7 +180,6 @@
   background-color: var(--mustard);
   color: var(--black);
   text-decoration: none;
-  border-radius: 4px;
   text-align: center;
   font-size: 14px;
 }
@@ -229,11 +228,6 @@
   .guidelines {
     grid-template-columns: 1fr;
     padding: 2rem;
-  }
-  .guidelines-a {
-    color: var(--mustard);
-    text-decoration: none;
-    font-weight: bolder;
   }
 
   .guidelines > div:nth-of-type(1) {

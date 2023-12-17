@@ -1,38 +1,4 @@
-@font-face {
-  font-family: "Akzidenz-Grotesk-Regular";
-  src: url("fonts/AKZIDENZ-GROTESK-PRO-LIGHT-REGULAR.OTF");
-  font-weight: light;
-}
-
-@font-face {
-  font-family: "Akzidenz-Grotesk-Regular";
-  src: url("fonts/AKZIDENZ-GROTESK-PRO-REGULAR-REGULAR.OTF");
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: "Akzidenz-Grotesk-Regular";
-  src: url("fonts/AKZIDENZ-GROTESK-PRO-MED-REGULAR.OTF");
-  font-weight: bold;
-}
-
-@font-face {
-  font-family: "Akzidenz-Grotesk-Extended";
-  src: url("fonts/AKZIDENZ-GROTESK-PRO-LIGHT-EXT-REGULAR.OTF");
-  font-weight: light;
-}
-
-@font-face {
-  font-family: "Akzidenz-Grotesk-Extended";
-  src: url("fonts/AKZIDENZ-GROTESK-PRO-MED-EXT-REGULAR.OTF");
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: "Akzidenz-Grotesk-Extended";
-  src: url("fonts/AKZIDENZ-GROTESK-PRO-BOLD-EXT-REGULAR.OTF");
-  font-weight: bold;
-}
+@import url("https://use.typekit.net/aew4zfv.css");
 
 :root {
   --black: #1e1e1e;
@@ -52,16 +18,20 @@ html {
 
 body {
   background-color: var(--light-yellow);
-  font-family: "Akzidenz-Grotesk-Regular";
+  font-family: aktiv-grotesk, sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 h1 {
-  font-family: "Akzidenz-Grotesk-Extended";
-  font-weight: bold;
+  font-family: aktiv-grotesk-extended, sans-serif;
+  font-weight: 700;
+  font-style: normal;
 }
-h2 {
-  font-family: "Akzidenz-Grotesk-Extended";
-  font-weight: bold;
-  size: 40px;
+h2,
+h3 {
+  font-family: aktiv-grotesk-extended, sans-serif;
+  font-weight: 700;
+  font-style: normal;
 }
 
 nav {
@@ -77,7 +47,9 @@ nav {
 
 nav .logo {
   font-size: 1.5rem;
-  font-weight: bold;
+  font-family: aktiv-grotesk-extended, sans-serif;
+  font-weight: 700;
+  font-style: normal;
 }
 
 nav ul {

@@ -355,8 +355,7 @@ header div {
   display: grid;
   grid-template-columns: 3fr 6fr 3fr;
   gap: 1rem;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding-block: 3rem;
 }
 
 .fun-facts > div {
@@ -412,7 +411,7 @@ header div {
 
 .mustard-square h3 {
   font-weight: bold;
-  font-size: 52px;
+
   margin: 0;
   padding: 0;
   text-align: left;

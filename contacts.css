@@ -53,7 +53,7 @@ header div {
   padding: 1rem;
   background-color: var(--light-yellow);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
+
   grid-column: 2 / span 1;
   grid-row: auto / span 1;
 }
