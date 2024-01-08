@@ -41,35 +41,75 @@
   grid-area: 2/3;
 }
 
-.guidelines {
-  background-image: url(assets/section-background.png);
-  background-repeat: no-repeat;
-  background-size: cover;
+/* .guidelines {
   display: grid;
   grid-template-columns: 1fr 4fr 1fr;
   gap: 1.5rem;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding-top: 3rem;
-  min-height: 100vh;
+  padding: 3rem 0;
+}
+
+.guidelines img {
+  grid-column: 1/4;
+  grid-row: 1;
+}
+
+.guidelines > div {
+  grid-column: 2/3;
+  grid-row: 1;
+  width: 80%;
+  justify-self: center;
+} */
+
+.guidelines {
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 3rem 0;
+}
+
+.guidelines img {
+  grid-column: 1 / 4;
+  grid-row: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  overflow: hidden;
+  place-self: center;
+}
+
+.guidelines > div {
+  grid-column: 2 / 3;
+  grid-row: 1;
+  width: 80%;
+  justify-self: center;
 }
 
 .guidelines > div:nth-of-type(1) {
-  grid-area: 1/2;
   display: flex;
   gap: 1rem;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
+  margin: 4rem 0;
+}
+
+.guidelines a {
+  font-family: aktiv-grotesk-extended, sans-serif;
+
+  font-weight: 700;
 }
 
 .join-us {
   display: grid;
   grid-template-columns: 1fr 4fr 4fr 1fr;
   gap: 1.5rem;
-  padding-top: 3rem;
   margin-bottom: 3rem;
 }
 
@@ -89,10 +129,23 @@
   max-width: 100%;
 }
 
+.join-us h2 span {
+  font-weight: 300;
+}
+
+.join-us p span {
+  font-family: aktiv-grotesk-extended, sans-serif;
+
+  font-weight: 700;
+}
+
 .join-us a {
   text-decoration: none;
   color: var(--black);
   position: relative;
+  font-family: aktiv-grotesk-extended, sans-serif;
+
+  font-weight: 700;
 }
 
 .join-us a::after {
@@ -155,9 +208,10 @@
   height: auto;
 }
 .games p.gameType {
-  padding: 1rem;
-  font-weight: bold;
+  padding: 0 1rem;
+  font-variant: small-caps;
 }
+
 .games p.date {
   padding-inline-start: 1rem;
   color: var(--mustard);
@@ -171,7 +225,7 @@
 .buttons {
   display: flex;
   justify-content: flex-start;
-  gap: 2rem;
+  gap: 1rem;
   margin-top: 1rem;
 }
 
@@ -182,6 +236,12 @@
   text-decoration: none;
   text-align: center;
   font-size: 14px;
+  font-weight: 700;
+}
+
+.buttons a.button:nth-of-type(1) {
+  background-color: var(--light-yellow);
+  color: var(--black);
 }
 
 .buttons a.button:hover {
@@ -226,18 +286,25 @@
   }
 
   .guidelines {
-    grid-template-columns: 1fr;
-    padding: 2rem;
+    grid-template-columns: 1fr 6fr 1fr;
+    gap: 0.5rem;
   }
 
-  .guidelines > div:nth-of-type(1) {
-    order: 2;
+  .guidelines img {
+    width: 100%;
+    height: 100%; /* Adjust height to cover the container */
+    object-fit: cover;
+    overflow: hidden;
+  }
+
+  .guidelines > div {
+    width: 100%;
   }
 
   .join-us {
     display: grid;
-    grid-template-columns: 1fr 4fr 1fr;
-    gap: 1rem;
+    grid-template-columns: 1fr 6fr 1fr;
+    gap: 0.5rem;
   }
 
   .join-us div {
@@ -247,6 +314,20 @@
   .join-us img {
     grid-area: 1/2;
     max-width: 100%;
+  }
+
+  .join-us h1 span {
+    line-height: 0.5rem;
+  }
+  /* Break the heading after the span on mobile screens */
+  .break-heading {
+    white-space: nowrap; /* Prevent wrapping before the span */
+  }
+
+  .break-heading span::after {
+    content: "\A"; /* Insert a line break after the span */
+    white-space: pre; /* Preserve whitespace */
+    display: block; /* Make it a block element */
   }
 
   .upcoming-events > div:nth-of-type(1) {
