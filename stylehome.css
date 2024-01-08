@@ -139,7 +139,8 @@
   font-weight: 700;
 }
 
-.join-us a {
+.join-us a,
+.about a {
   text-decoration: none;
   color: var(--black);
   position: relative;
@@ -152,6 +153,34 @@
   content: url("assets/line.png");
   position: absolute;
   left: 0.5rem;
+  top: 1rem;
+}
+/* -------------------------------- */
+.about {
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-image: url(assets/line.png);
+  background-size: cover;
+  background-position: center;
+  padding: 3rem 0;
+}
+.about div {
+  grid-column: 2;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.about a::after {
+  content: url("assets/line.png");
+  position: absolute;
+  left: 0rem;
   top: 1rem;
 }
 /* -------------------------------- */
