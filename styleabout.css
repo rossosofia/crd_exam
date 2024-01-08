@@ -111,7 +111,7 @@ header div {
 
 .track {
   justify-self: center;
-  rotate: calc(-10deg);
+  transform: rotate(-10deg);
   width: 70%;
 }
 .nso {
@@ -220,7 +220,7 @@ header div {
   align-self: center;
 }
 .track-basics {
-  rotate: calc(-20deg);
+  transform: rotate(-20deg);
   width: auto;
   height: 40vh;
 }
@@ -498,7 +498,7 @@ header div {
 
   .track {
     width: 100%;
-    rotate: calc(-40deg);
+    transform: rotate(-40deg);
   }
   .nso {
     width: 30%;
@@ -577,7 +577,7 @@ header div {
     grid-template-rows: 30% 70%;
   }
   .track-basics {
-    rotate: calc(-20deg);
+    transform: rotate(-20deg);
     width: auto;
     height: 30vh;
     justify-self: center;
