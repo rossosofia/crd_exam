@@ -285,26 +285,20 @@ header div {
 }
 
 /* ------------------ questions ----------------------*/
-
 .questions {
   display: grid;
-  grid-template-columns: 1fr;
-  /* margin-top: 8rem; */
-  /* gap: 3rem; */
-  padding-block: 2rem;
-  justify-content: center;
-  align-items: center;
+  grid-template-columns: 2fr 6fr 2fr;
+  margin-top: 8rem;
+  gap: 3rem;
 }
 
 .questions > div:first-child {
-  display: grid;
-  padding: 2rem;
   grid-area: 1/2;
-  /* grid-template-columns: 30% 70%; */
-  gap: 0rem;
+  display: grid;
+  grid-template-columns: 30% 70%;
+  gap: 1rem;
   justify-content: center;
   align-items: center;
-  /* padding-block-end: 3rem; */
 }
 
 .questions-title {
@@ -547,7 +541,6 @@ header div {
     grid-template-columns: 3% 94% 3%;
     padding-block-end: 3rem;
     padding-block-start: 1rem;
-
     gap: 2rem;
     justify-content: center;
   }
