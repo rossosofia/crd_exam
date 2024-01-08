@@ -25,8 +25,8 @@ function setupGames(catArray) {
     const copy = document.importNode(template.content, true);
 
     copy.querySelector("img").src = game.img || "";
-    copy.querySelector(".gameType").textContent = game.gameType || "";
-    copy.querySelector("h2").textContent = game.title || "";
+    copy.querySelector(".gameType").textContent = (game.gameType || "").toLowerCase();
+    copy.querySelector("h3").textContent = game.title || "";
     copy.querySelector(".date").textContent = game.date || "";
     copy.querySelector(".location").textContent = game.location || "";
     copy.querySelector(".teams").textContent = game.teams || "";
