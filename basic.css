@@ -122,8 +122,10 @@ footer {
   align-items: center;
 }
 
-footer h3 {
+footer h4 {
   color: var(--mustard);
+  font-family: aktiv-grotesk-extended, sans-serif;
+  font-weight: 900;
 }
 
 footer a {

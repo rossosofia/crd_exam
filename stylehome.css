@@ -246,7 +246,7 @@
   color: var(--mustard);
 }
 
-.games h2,
+.games h3,
 .games p.location,
 .games p.teams {
   padding-inline-start: 1rem;
