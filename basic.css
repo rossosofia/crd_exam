@@ -39,7 +39,7 @@ h3 {
   font-family: aktiv-grotesk-extended, sans-serif;
   font-weight: 700;
   font-style: normal;
-  line-height: 1;
+  line-height: 0.5;
   padding: 0 1rem;
 }
 
@@ -48,31 +48,39 @@ p {
 }
 
 nav {
+  display: grid;
+  grid-template-columns: 1fr 8fr 1fr;
+  gap: 1.5rem;
   position: sticky;
-  top: 0;
   z-index: 100;
+  top: 0;
   background-color: var(--light-yellow);
+}
+
+nav div {
+  grid-column: 2/3;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 0.5rem 0;
+  flex-wrap: wrap;
 }
 
 nav .logo {
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-family: aktiv-grotesk-extended, sans-serif;
   font-weight: 900;
   font-style: normal;
 }
 
-nav ul {
+nav div ul {
   list-style: none;
   display: flex;
-  justify-content: space-evenly;
-  gap: 3rem;
+  justify-content: center;
+  gap: 2rem;
 }
 
-nav a {
+nav div a {
   text-decoration: none;
   color: var(--black);
   position: relative;
@@ -80,12 +88,12 @@ nav a {
 }
 
 .active-nav {
-  font-weight: bolder;
+  font-family: aktiv-grotesk-extended, sans-serif;
+  font-weight: 900;
   color: var(--black);
 }
 
-nav a::after {
-  content: "";
+nav div a::after {
   position: absolute;
   width: 100%;
   height: 0.125rem;
@@ -97,7 +105,7 @@ nav a::after {
   transition: transform 0.3s;
 }
 
-nav a:hover::after {
+nav div a:hover::after {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
@@ -153,18 +161,27 @@ footer > div:nth-child(2) {
 }
 
 @media screen and (max-width: 768px) {
-  nav {
+  nav div {
     flex-direction: column;
+    justify-content: center;
+  }
+
+  nav {
+    grid-template-columns: 1fr 6fr 1fr;
+    gap: 0.5rem;
     text-align: center;
   }
 
   nav .logo {
-    margin-bottom: 1rem;
+    font-size: 0.9rem;
   }
 
-  nav ul {
+  nav div ul {
     flex-direction: row;
-    gap: 1rem;
+    font-size: 0.8rem;
+    width: 100%;
+    justify-content: space-between;
+    gap: 0;
   }
 
   footer {
